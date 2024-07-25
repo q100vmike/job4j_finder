@@ -41,7 +41,7 @@ public class FileFinder {
         } else if ("mask".equals(type)) {
             String finalPattern1 = pattern.replace(".", "\\.")
                     .replace("*", ".+")
-                    .replace("?",".{1}") + "$";
+                    .replace("?", ".{1}") + "$";
             return path -> path.toFile().getName().matches(finalPattern1);
         } else {
             String finalPattern2 = pattern;
